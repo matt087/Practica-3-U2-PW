@@ -1,0 +1,20 @@
+<ul>
+    <li *ngFor="let obj of myArray; let i=index">
+        <div class="card" style="width: 40vw;">
+            <div class="img_c">
+                <img src={{obj.imagen}} class="card-img-top" alt="personas">
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">{{obj.categoria}}</h4>
+                <p class="card-text">{{obj.descripcion}}</p>
+                <div class="separacion"> 
+                    <button (click)="informacion2()" class="btn btn-info">Información</button>
+                    <button (click)="informacion(obj.categoria)" class="btn btn-primary">Más Información</button>
+                    <button (click)="borrarDeducible(obj.categoria)" class="btn btn-warning">Borrar</button>
+
+                </div>
+               
+            </div>
+        </div> 
+   </li>
+</ul>

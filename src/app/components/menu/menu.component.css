@@ -1,0 +1,22 @@
+nav{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s ease-in;
+    color: #0069d9;
+
+}
+
+nav a:hover{
+    color: #148ea1;
+    transform: scale(1.2);
+    cursor: pointer;
+}
