@@ -1,34 +1,35 @@
 <div class="formulario">
     <div class="form-group">
-        <form #miFormulario="ngForm" (ngSubmit)="guardarDatos(miFormulario)">
+        <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
             <h1 class="text-center text-primary">Impuestos</h1>
             <div class="input-group">
                 <label for="ruc" class="form-label">Cédula</label>
-                <input type="text" class="form-control" id="cedula" name="cedula" ngModel>
+                <input type="text" class="form-control" id="cedula" name="cedula" formControlName="ruc">
             </div>
             <div class="input-group">
-                <label for="valor" class="form-label">Sueldo Anual</label>
-                <input type="number" value="0" min="0" max="3809.65" class="form-control" id="sueldo" name="sueldo" ngModel>
+                <label for="sueldo" class="form-label">Sueldo Anual</label>
+                <input type="number" value="0" min="0" class="form-control" id="sueldo" name="sueldo" formControlName="sueldo">
             </div>
             <div class="input-group">
-                <label for="valor" class="form-label">Alimentación</label>
-                <input type="number" value="0" min="0" max="3809.65" class="form-control" id="alimentos" name="alimentos" ngModel>
+                <label for="deducciones">Deducciones por Gastos Personales</label>
+                <label for="alimentos" class="form-label">Alimentación</label>
+                <input type="number" value="0" min="0" max="3809.65" class="form-control" id="alimentos" name="alimentos" formControlName="alimentos">
             </div>
             <div class="input-group">
-                <label for="valor" class="form-label">Vivienda</label>
-                <input type="number" value="0" min="0" max="3809.65" class="form-control" id="vivienda" name="vivienda" ngModel>
+                <label for="vivienda" class="form-label">Vivienda</label>
+                <input type="number" value="0" min="0" max="3809.65" class="form-control" id="vivienda" name="vivienda" formControlName="vivienda">
             </div>
             <div class="input-group">
-                <label for="valor" class="form-label">Educación</label>
-                <input type="number" value="0" min="0" max="3809.65" class="form-control" id="educacion" name="educacion" ngModel>
+                <label for="educacion" class="form-label">Educación</label>
+                <input type="number" value="0" min="0" max="3809.65" class="form-control" id="educacion" name="educacion" formControlName="educacion">
             </div>
             <div class="input-group">
-                <label for="valor" class="form-label">Vestimenta</label>
-                <input type="number" value="0" min="0" max="3809.65" class="form-control" id="vestimenta" name="vestimenta" ngModel>
+                <label for="vestimenta" class="form-label">Vestimenta</label>
+                <input type="number" value="0" min="0" max="3809.65" class="form-control" id="vestimenta" name="vestimenta" formControlName="vestimenta">
             </div>
             <div class="input-group">
-                <label for="valor" class="form-label">Salud</label>
-                <input type="number" value="0" min="0" max="3809.65" class="form-control" id="salud" name="salud" ngModel>
+                <label for="salud" class="form-label">Salud</label>
+                <input type="number" value="0" min="0" max="3809.65" class="form-control" id="salud" name="salud" formControlName="salud">
             </div>
             <button class="boton" type="submit">Agregar</button>
         </form>  

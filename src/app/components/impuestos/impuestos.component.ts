@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Datos } from '../../models/datos.models.ts';
 
 @Component({
   selector: 'app-impuestos',
@@ -6,23 +8,31 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './impuestos.component.css'
 })
 export class ImpuestosComponent implements OnInit{
-  constructor(){}
-  datosFormulario: any = {};
+  formulario: FormGroup;
+  constructor(private fb: FormBuilder) 
+  {
+    this.formulario = this.fb.group({
+      ruc: ['', Validators.required],
+      sueldo: ['', Validators.required],
+      alimentos: ['', Validators.required],
+      vivienda: ['', Validators.required],
+      educacion: ['', Validators.required],
+      vestimenta: ['', Validators.required],
+      salud: ['', Validators.required]
+    });
+  }
+
+  onSubmit()
+  {
+    if(this.formulario.valid)
+    {
+      let datos = new Datos(this.formulario.value.ruc, this.formulario.value.sueldo, 
+        (this.formulario.value.alimentos+this.formulario.value.vivienda+this.formulario.value.educacion
+        +this.formulario.value.vestimenta+this.formulario.value.salud)
+      );
+    }
+  }
 
   ngOnInit():void{
-  }
-  guardarDatos(formulario: any) {
-    this.datosFormulario = {
-      cedula: formulario.value.cedula,
-        sueldo: formulario.value.sueldo,
-        alimentos: formulario.value.alimentos,
-        vivienda: formulario.value.vivienda,
-        educacion: formulario.value.educacion,
-        vestimenta: formulario.value.vestimenta, 
-        salud: formulario.value.salud
-    };
-    console.log('Datos guardados:', this.datosFormulario);
-  }
-
-  
+  }  
 }
