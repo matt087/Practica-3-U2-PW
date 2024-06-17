@@ -1,0 +1,37 @@
+<div class="formulario">
+    <div class="form-group">
+        <form #miFormulario="ngForm" (ngSubmit)="guardarDatos(miFormulario)">
+            <h1 class="text-center text-primary">Impuestos</h1>
+            <div class="input-group">
+                <label for="ruc" class="form-label">Cédula</label>
+                <input type="text" class="form-control" id="cedula" name="cedula" ngModel>
+            </div>
+            <div class="input-group">
+                <label for="valor" class="form-label">Sueldo Anual</label>
+                <input type="number" value="0" min="0" max="3809.65" class="form-control" id="sueldo" name="sueldo" ngModel>
+            </div>
+            <div class="input-group">
+                <label for="valor" class="form-label">Alimentación</label>
+                <input type="number" value="0" min="0" max="3809.65" class="form-control" id="alimentos" name="alimentos" ngModel>
+            </div>
+            <div class="input-group">
+                <label for="valor" class="form-label">Vivienda</label>
+                <input type="number" value="0" min="0" max="3809.65" class="form-control" id="vivienda" name="vivienda" ngModel>
+            </div>
+            <div class="input-group">
+                <label for="valor" class="form-label">Educación</label>
+                <input type="number" value="0" min="0" max="3809.65" class="form-control" id="educacion" name="educacion" ngModel>
+            </div>
+            <div class="input-group">
+                <label for="valor" class="form-label">Vestimenta</label>
+                <input type="number" value="0" min="0" max="3809.65" class="form-control" id="vestimenta" name="vestimenta" ngModel>
+            </div>
+            <div class="input-group">
+                <label for="valor" class="form-label">Salud</label>
+                <input type="number" value="0" min="0" max="3809.65" class="form-control" id="salud" name="salud" ngModel>
+            </div>
+            <button class="boton" type="submit">Agregar</button>
+        </form>  
+    </div>
+</div>
+

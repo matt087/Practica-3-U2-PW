@@ -6,7 +6,6 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class DataService {
-
   private jsonUrl = '../assets/categorias.json'; // Ruta al archivo JSON
   constructor(private http: HttpClient) { }
   getData(): Observable<any> {
