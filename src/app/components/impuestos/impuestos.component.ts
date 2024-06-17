@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Datos } from '../../models/datos.models.ts';
+import { Datos } from '../../models/datos.models';
 
 @Component({
   selector: 'app-impuestos',
@@ -30,6 +30,7 @@ export class ImpuestosComponent implements OnInit{
         (this.formulario.value.alimentos+this.formulario.value.vivienda+this.formulario.value.educacion
         +this.formulario.value.vestimenta+this.formulario.value.salud)
       );
+      console.log(datos);
     }
   }
 

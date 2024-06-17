@@ -14,11 +14,16 @@ export class Datos
     this.ruc = ruc;
     this.ingresos = ingresos;
     this.gastos = gastos;
-    newFraccionBasica();
-    newImponible();
-    newExcedente();
-    newPorcentajeExcedente();
-    calculoImpuestoRenta();
+    this.fBasica = 0;
+    this.imponible = 0;
+    this.excedente = 0;
+    this.pExcedente = 0;
+    this.impuestoRenta = 0;
+    this.newFraccionBasica();
+    this.newImponible();
+    this.newExcedente();
+    this.newPorcentajeExcedente();
+    this.calculoImpuestoRenta();
   }
 
   newImponible():void
