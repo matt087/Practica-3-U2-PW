@@ -3,33 +3,33 @@
         <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
             <h1 class="text-center text-primary">Impuestos</h1>
             <div class="input-group">
-                <label for="ruc" class="form-label">Cédula</label>
-                <input type="text" class="form-control" id="cedula" name="cedula" formControlName="ruc">
+                <label for="ruc" class="form-label">RUC</label>
+                <input type="text" placeholder="0000000000000" minlength="13" maxlength="13" required class="form-control" id="ruc" name="ruc" formControlName="ruc">
             </div>
             <div class="input-group">
                 <label for="sueldo" class="form-label">Sueldo Anual</label>
-                <input type="number" value="0" min="0" class="form-control" id="sueldo" name="sueldo" formControlName="sueldo">
+                <input type="number" required value="1" min="1" class="form-control" id="sueldo" name="sueldo" formControlName="sueldo">
             </div>
+            <label class="title" for="deducciones">Deducciones por Gastos Personales</label>
             <div class="input-group">
-                <label for="deducciones">Deducciones por Gastos Personales</label>
                 <label for="alimentos" class="form-label">Alimentación</label>
-                <input type="number" value="0" min="0" max="3809.65" class="form-control" id="alimentos" name="alimentos" formControlName="alimentos">
+                <input type="number" required value="0" min="0" max="3809.65" class="form-control" id="alimentos" name="alimentos" formControlName="alimentos">
             </div>
             <div class="input-group">
                 <label for="vivienda" class="form-label">Vivienda</label>
-                <input type="number" value="0" min="0" max="3809.65" class="form-control" id="vivienda" name="vivienda" formControlName="vivienda">
+                <input type="number" required value="0" min="0" max="3809.65" class="form-control" id="vivienda" name="vivienda" formControlName="vivienda">
             </div>
             <div class="input-group">
                 <label for="educacion" class="form-label">Educación</label>
-                <input type="number" value="0" min="0" max="3809.65" class="form-control" id="educacion" name="educacion" formControlName="educacion">
+                <input type="number" required value="0" min="0" max="3809.65" class="form-control" id="educacion" name="educacion" formControlName="educacion">
             </div>
             <div class="input-group">
                 <label for="vestimenta" class="form-label">Vestimenta</label>
-                <input type="number" value="0" min="0" max="3809.65" class="form-control" id="vestimenta" name="vestimenta" formControlName="vestimenta">
+                <input type="number" required value="0" min="0" max="3809.65" class="form-control" id="vestimenta" name="vestimenta" formControlName="vestimenta">
             </div>
             <div class="input-group">
                 <label for="salud" class="form-label">Salud</label>
-                <input type="number" value="0" min="0" max="3809.65" class="form-control" id="salud" name="salud" formControlName="salud">
+                <input type="number" required value="0" min="0" max="3809.65" class="form-control" id="salud" name="salud" formControlName="salud">
             </div>
             <button class="boton" type="submit">Agregar</button>
         </form>  

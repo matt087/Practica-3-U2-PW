@@ -115,6 +115,19 @@ export class Datos
 
   }
 
+  toJson(): object {
+    return {
+      ruc: this.ruc,
+      ingresos: this.ingresos,
+      gastos: this.gastos,
+      fBasica: this.fBasica,
+      imponible: this.imponible,
+      excedente: this.excedente,
+      pExcedente: this.pExcedente,
+      impuestoRenta: this.impuestoRenta,
+    };
+  }
+
 }
 
 

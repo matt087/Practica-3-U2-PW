@@ -27,3 +27,10 @@ body{
 .boton{
     margin-top: 20px;
 }
+
+.title{
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    color:  #0069d9;
+}
