@@ -12,6 +12,21 @@ import { ReporteComponent } from './components/reporte/reporte.component';
 import { FormularioComponent } from './components/formulario/formulario.component';
 import { FormsModule } from '@angular/forms';
 import { ImpuestosComponent } from './components/impuestos/impuestos.component';
+import { Routes, RouterModule } from '@angular/router';
+import { HomeComponent } from './components/home/home.component';
+import { GastoService } from './services/gasto.service';
+import { DataService} from './services/data.service';
+import { JsonFileService } from './services/json-file.service';
+
+
+
+const rutas: Routes = [
+  { path: 'info', component: InformacionComponent },
+  { path: 'formulario', component: FormularioComponent },
+  { path: 'impuestos', component: ImpuestosComponent },  
+  { path: 'reporte', component: ReporteComponent },
+  ];
+  
 
 @NgModule({
   declarations: [
@@ -20,17 +35,22 @@ import { ImpuestosComponent } from './components/impuestos/impuestos.component';
     InformacionComponent,
     ReporteComponent,
     FormularioComponent,
-    ImpuestosComponent
+    ImpuestosComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule, 
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule.forRoot(rutas)
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    GastoService, 
+    DataService,
+    JsonFileService
   ],
   bootstrap: [AppComponent]
 })

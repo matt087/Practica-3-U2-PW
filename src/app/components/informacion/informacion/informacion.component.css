@@ -28,3 +28,24 @@ button{
     align-items: center;
     justify-content: center;
 }
+
+.card{
+    background-color: #fff7d1;
+
+}
+
+.btn-info{
+    border: none;
+    background-color: #023047;
+}
+
+.btn-primary{
+    border: none;
+    background-color: #fb8500;
+    color: #023047;
+}
+
+button{
+    font-size: 22px ;
+    font-weight: 600;
+}

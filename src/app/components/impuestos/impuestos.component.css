@@ -34,3 +34,14 @@ body{
     font-weight: bold;
     color:  #0069d9;
 }
+
+.res{
+    margin-top: 15px; 
+    display: flex;
+    gap: 10px;
+}
+
+.res h2{
+    font-size: 20px;
+
+}
